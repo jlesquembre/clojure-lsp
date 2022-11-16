@@ -209,11 +209,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../api/" class="md-tabs__link">
-      API
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api/what-is-it/" class="md-tabs__link">
+        Outside editor (API)
+      </a>
+    </li>
+  
 
       
         
@@ -637,6 +641,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#clj-depend" class="md-nav__link">
+    clj-depend
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -721,10 +732,104 @@
 
 
 
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    
+    <label class="md-nav__link" for="nav-4">
+      Outside editor (API)
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Outside editor (API)" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Outside editor (API)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
   <li class="md-nav__item">
-    <a href="../api/" class="md-nav__link">
-      API
+    <a href="../api/what-is-it/" class="md-nav__link">
+      What is clojure-lsp API?
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../api/api/" class="md-nav__link">
+      API (JVM)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../api/cli/" class="md-nav__link">
+      CLI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../api/ci/" class="md-nav__link">
+      CI
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../api/lein-plugin/" class="md-nav__link">
+      Lein plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../api/bb-pod/" class="md-nav__link">
+      Babashka pod
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -969,6 +1074,13 @@
           <li class="md-nav__item">
   <a href="#clojure-lspunused-public-var" class="md-nav__link">
     clojure-lsp/unused-public-var
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clj-depend" class="md-nav__link">
+    clj-depend
   </a>
   
 </li>
@@ -1360,6 +1472,9 @@ make most of features work.</p>
 <h4 id="clojure-lspunused-public-var">clojure-lsp/unused-public-var<a class="headerlink" href="#clojure-lspunused-public-var" title="Permanent link">#</a></h4>
 <p><img alt="" src="../images/features/unused-public-var.png" /></p>
 <p>For more information on how to configure it, check the <a href="../settings/#diagnostics-linter">diagnostics settings section</a>.</p>
+<h4 id="clj-depend">clj-depend<a class="headerlink" href="#clj-depend" title="Permanent link">#</a></h4>
+<p>Clojure-lsp has a optional integration with <a href="https://github.com/clj-depend/clj-depend">clj-depend</a>, making it easier to configure namespaces relationship.</p>
+<p>For more information on how to configure it, check the <a href="../settings/#diagnostics-linter">diagnostics settings section</a>.</p>
 <h3 id="stub-generation">Stub generation<a class="headerlink" href="#stub-generation" title="Permanent link">#</a></h3>
 <p>It's possible to configure clojure-lsp to generate and analyze stubs for specific namespaces available on your project classpath, this is useful for closed source dependencies like <code>datomic.api</code>, with that clojure-lsp will be able to make most features work with those dependencies.
 For more information check the <a href="../settings/#stub-generation">stubs settings section</a>.</p>
@@ -1387,6 +1502,22 @@ For more information check the <a href="../settings/#stub-generation">stubs sett
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>ab</td>
+<td>drag-param-backward</td>
+<td>Drag param backward</td>
+<td><code>[file-uri,row,col]</code></td>
+<td>✅</td>
+<td><a href="../images/features/drag-param.gif"><img alt="Screen recording of Drag param forward and backward" src="../images/features/drag-param.gif" /></a></td>
+</tr>
+<tr>
+<td>af</td>
+<td>drag-param-forward</td>
+<td>Drag param forward</td>
+<td><code>[file-uri,row,col]</code></td>
+<td>✅</td>
+<td><a href="../images/features/drag-param.gif"><img alt="Screen recording of Drag param forward and backward" src="../images/features/drag-param.gif" /></a></td>
+</tr>
 <tr>
 <td>ai</td>
 <td>add-import-to-namespace</td>
@@ -1468,9 +1599,25 @@ For more information check the <a href="../settings/#stub-generation">stubs sett
 <td><a href="../images/features/drag.gif"><img alt="Screen recording of Drag forward and backward" src="../images/features/drag.gif" /></a></td>
 </tr>
 <tr>
+<td>dk</td>
+<td>destructure-keys</td>
+<td>Destructure keys</td>
+<td><code>[file-uri,row,col]</code></td>
+<td>✅</td>
+<td><a href="../images/features/destructure-keys.gif"><img alt="Screen recording of Destructure keys" src="../images/features/destructure-keys.gif" /></a></td>
+</tr>
+<tr>
+<td>ed</td>
+<td>extract-to-def</td>
+<td>Extract to def</td>
+<td><code>[file-uri,row,col,name]</code></td>
+<td>✅</td>
+<td><a href="../images/features/extract-to-def.gif"><img alt="Screen recording of Extract to def" src="../images/features/extract-to-def.gif" /></a></td>
+</tr>
+<tr>
 <td>ef</td>
 <td>extract-function</td>
-<td>Extract Function</td>
+<td>Extract function</td>
 <td><code>[file-uri,row,col,name]</code></td>
 <td>✅</td>
 <td><a href="../images/features/extract-function.gif"><img alt="Screen recording of Extract function" src="../images/features/extract-function.gif" /></a></td>
@@ -1490,6 +1637,38 @@ For more information check the <a href="../settings/#stub-generation">stubs sett
 <td><code>[file-uri,row,col]</code></td>
 <td>✅</td>
 <td><a href="../images/features/create-private-function.gif"><img alt="Screen recording of Create function from example" src="../images/features/create-private-function.gif" /></a></td>
+</tr>
+<tr>
+<td>ga</td>
+<td>get-in-all</td>
+<td>Move all expressions to get/get-in</td>
+<td><code>[file-uri,row,col]</code></td>
+<td>✅</td>
+<td><a href="../images/features/thread-get.gif"><img alt="Screen recording of Threading get" src="../images/features/thread-get.gif" /></a></td>
+</tr>
+<tr>
+<td>gl</td>
+<td>get-in-less</td>
+<td>Remove one element from get/get-in</td>
+<td><code>[file-uri,row,col]</code></td>
+<td>✅</td>
+<td><a href="../images/features/thread-get.gif"><img alt="Screen recording of Threading get" src="../images/features/thread-get.gif" /></a></td>
+</tr>
+<tr>
+<td>gm</td>
+<td>get-in-more</td>
+<td>Move another expression to get/get-in</td>
+<td><code>[file-uri,row,col]</code></td>
+<td>✅</td>
+<td><a href="../images/features/thread-get.gif"><img alt="Screen recording of Threading get" src="../images/features/thread-get.gif" /></a></td>
+</tr>
+<tr>
+<td>gn</td>
+<td>get-in-none</td>
+<td>Unwind whole get/get-in</td>
+<td><code>[file-uri,row,col]</code></td>
+<td>✅</td>
+<td><a href="../images/features/thread-get.gif"><img alt="Screen recording of Threading get" src="../images/features/thread-get.gif" /></a></td>
 </tr>
 <tr>
 <td>il</td>
@@ -1540,6 +1719,14 @@ For more information check the <a href="../settings/#stub-generation">stubs sett
 <td><a href="../images/features/promote-fn.gif"><img alt="Screen recording of Promote fn to defn" src="../images/features/promote-fn.gif" /></a></td>
 </tr>
 <tr>
+<td>rk</td>
+<td>restructure-keys</td>
+<td>Restructure keys</td>
+<td><code>[file-uri,row,col]</code></td>
+<td>✅</td>
+<td><a href="../images/features/restructure-keys.gif"><img alt="Screen recording of Restructure keys" src="../images/features/restructure-keys.gif" /></a></td>
+</tr>
+<tr>
 <td>sc</td>
 <td>change-collection</td>
 <td>Switch collection to <code>{}, (), #{}, []</code></td>
@@ -1548,12 +1735,12 @@ For more information check the <a href="../settings/#stub-generation">stubs sett
 <td><a href="../images/features/change-coll.gif"><img alt="Screen recording of Switch collection" src="../images/features/change-coll.gif" /></a></td>
 </tr>
 <tr>
-<td>sm</td>
-<td>sort-map</td>
-<td>Sort map</td>
+<td>sl</td>
+<td>sort-clauses</td>
+<td>Sort map/vector/list/set/clauses</td>
 <td><code>[file-uri,row,col]</code></td>
 <td>✅</td>
-<td><a href="../images/features/sort-map.gif"><img alt="Screen recording of Sort map" src="../images/features/sort-map.gif" /></a></td>
+<td><a href="../images/features/sort-clauses.gif"><img alt="Screen recording of Sort clauses" src="../images/features/sort-clauses.gif" /></a></td>
 </tr>
 <tr>
 <td>tf</td>
@@ -1590,7 +1777,7 @@ For more information check the <a href="../settings/#stub-generation">stubs sett
 <tr>
 <td>ua</td>
 <td>unwind-all</td>
-<td>Unwind all</td>
+<td>Unwind whole thread</td>
 <td><code>[file-uri,row,col]</code></td>
 <td>✅</td>
 <td></td>
@@ -1598,7 +1785,7 @@ For more information check the <a href="../settings/#stub-generation">stubs sett
 <tr>
 <td>uw</td>
 <td>unwind-thread</td>
-<td>Unwind thread</td>
+<td>Unwind thread once</td>
 <td><code>[file-uri,row,col]</code></td>
 <td></td>
 <td></td>
@@ -1618,7 +1805,7 @@ For more information check the <a href="../settings/#stub-generation">stubs sett
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 11, 2022</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 14, 2022</span>
     
   </small>
 </div>
