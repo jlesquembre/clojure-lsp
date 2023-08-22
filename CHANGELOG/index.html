@@ -347,7 +347,7 @@
 
   <li class="md-nav__item">
     <a href="../clients/" class="md-nav__link">
-      Clients
+      Clients (Editors)
     </a>
   </li>
 
@@ -595,6 +595,20 @@
         <li class="md-nav__item">
   <a href="#unreleased" class="md-nav__link">
     Unreleased
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20230806-002806" class="md-nav__link">
+    2023.08.06-00.28.06
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20230701-223541" class="md-nav__link">
+    2023.07.01-22.35.41
   </a>
   
 </li>
@@ -1401,6 +1415,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#20230806-002806" class="md-nav__link">
+    2023.08.06-00.28.06
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20230701-223541" class="md-nav__link">
+    2023.07.01-22.35.41
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#20230504-193801" class="md-nav__link">
     2023.05.04-19.38.01
   </a>
@@ -2182,10 +2210,38 @@
                 
                 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">#</a></h1>
 <h2 id="unreleased">Unreleased<a class="headerlink" href="#unreleased" title="Permanent link">#</a></h2>
+<h2 id="20230806-002806">2023.08.06-00.28.06<a class="headerlink" href="#20230806-002806" title="Permanent link">#</a></h2>
+<ul>
+<li>General</li>
+<li>Fix truncation of namespaced keywords #1640</li>
+<li>Add rewrite-clj node to cursor-info.</li>
+<li>Fixing semantic-tokens, collons not managed by lsp anymore. #1550</li>
+<li>Fix <code>:paths-ignore-regex</code> setting to consider settings reload.</li>
+<li>Bump clj-kondo to <code>2023.07.14-20230717.090255-3</code>. #1624</li>
+<li>Fix inconsistencies with <code>:defined-by-&gt;lint-as</code>.</li>
+<li>Improve memory usage during cache save, avoiding "Out of memory" exceptions.</li>
+<li>Prevent file rename when a namespace is defined in multiple files #1574</li>
+<li>Fix user formatting setting being override by :style/indent metadata in macros.</li>
+<li>Bump cljfmt to <code>0.11.2</code>. #1634</li>
+<li>
+<p>Bump lsp4clj to <code>1.8.1</code>.</p>
+</li>
+<li>
+<p>Editor</p>
+</li>
+<li>
+<p>Avoid returning all known keywords on empty keywords completion for performance reasons.</p>
+</li>
+<li>
+<p>API/CLI</p>
+</li>
+<li>Improve mem/cpu usage using less analysis for tasks.</li>
+</ul>
+<h2 id="20230701-223541">2023.07.01-22.35.41<a class="headerlink" href="#20230701-223541" title="Permanent link">#</a></h2>
 <ul>
 <li>General</li>
 <li>Update flake.nix to build with babashka. #1373</li>
-<li>Bump clj-kondo to <code>2023.06.02-20230621.091643-10</code>.</li>
+<li>Bump clj-kondo to <code>2023.06.02-20230630.144012-16</code>.</li>
 <li>Improve support for ClojureDart <code>.cljd</code> files. #1589</li>
 <li>Slightly reduce OutOfMemory exceptions that may happen with the JVM version.</li>
 <li>Support ignore unused-public-vars via <code>:linters :clojure-lsp/unused-public-var :exclude-when-contains-meta</code> clj-kondo setting.</li>
@@ -3539,7 +3595,7 @@ when multiple files are changed at same time (rename, iedit, etc).</li>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 1, 2023</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 22, 2023</span>
     
   </small>
 </div>
